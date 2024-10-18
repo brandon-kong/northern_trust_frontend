@@ -3,16 +3,14 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="max-h-[800px] overflow-crop p-8 pb-20 gap-6 sm:p-20">
+    <div className="relative min-h-screen overflow-hidden p-8 pb-20 gap-6 sm:p-20 flex flex-col items-center justify-center">
       <div
         className={
-          "relative flex flex-col gap-4 items-center justify-items-center"
+          "relative flex flex-col gap-4 items-center justify-center w-full h-full"
         }
       >
         <LandingH1 className={"font-semibold text-center text-slate-700"}>
-          Explore <span className={"text-yellow-600"}>Your Community</span> Like
-          You&apos;ve <br className={"hidden lg:block"} />
-          Never Done Before.
+          Your Ultimate Hub for <span className={"text-teal-500"}>Global Currency Exchange</span>
         </LandingH1>
 
         <P
@@ -20,17 +18,17 @@ export default function Home() {
             "text-xl max-w-xl text-center font-medium leading-8 text-muted-foreground"
           }
         >
-          Discover the hidden gems in your neighborhood, learn about the people
-          who live there, and find out how you can make a difference.
+          Seamlessly manage currencies in one platform. Access real-time rates, execute exchanges, and monitor your portfolio—all tailored to your preferences and location.
         </P>
 
-        <div className={"w-full"}>
+        <div className={"relative w-full h-[calc(100vh-300px)] lg:h-[80vh] mt-6"}>
           <Image
-            src={"/images/isometric-map.svg"}
-            alt={"Isometric map"}
-            width={1000}
-            height={1000}
-            className={"w-full -z-10 opacity-50 top-0 lg:absolute"}
+            src={"/images/image.jpg"} // Make sure the image path is correct
+            alt={"Cryptocurrency background"}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            className={"dropEffect"}
           />
         </div>
       </div>
